@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perfect Student Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>🌟 Perfect Student Day</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#day">My Day</a>
+                <a href="#goals">Goals</a>
+                <a href="#focus">Focus</a>
+                <a href="#habits">Habits</a>
+                <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div>
+                <p class="small-title">MY IDEAL DAILY ROUTINE</p>
+
+                <h1>The Perfect<br><span>Student Day</span></h1>
+
+                <p class="hero-text">
+                    Learn. Grow. Move. Create. Rest.
+                    Build a balanced routine and make every day meaningful.
+                </p>
+
+                <button class="start-btn" onclick="startDay()">
+                    Start My Day 🚀
+                </button>
+            </div>
+
+            <div class="hero-card">
+                <div class="sun">☀️</div>
+                <h3>Today's Progress</h3>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+                <p id="progressText">0% completed</p>
+            </div>
+        </section>
+
+
+        <!-- My Day -->
+        <section id="day" class="section">
+            <p class="section-label">MY DAILY ROUTINE</p>
+            <h2>How I Spend My Day ⏰</h2>
+
+            <div class="timeline">
+
+                <div class="time-card">
+                    <div class="time">6:00 AM</div>
+                    <div class="activity">
+                        <h3>🌅 Wake Up</h3>
+                        <p>Start the day with a positive mindset and drink water.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">7:00 AM</div>
+                    <div class="activity">
+                        <h3>🥗 Healthy Breakfast</h3>
+                        <p>Have a nutritious breakfast and get ready for college.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">8:30 AM</div>
+                    <div class="activity">
+                        <h3>🎓 College & Learning</h3>
+                        <p>Attend classes, listen carefully and learn new concepts.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">1:00 PM</div>
+                    <div class="activity">
+                        <h3>🍱 Lunch & Break</h3>
+                        <p>Enjoy lunch and take a refreshing short break.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">4:30 PM</div>
+                    <div class="activity">
+                        <h3>📚 Focus Study</h3>
+                        <p>Study important topics without distractions.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">6:00 PM</div>
+                    <div class="activity">
+                        <h3>🏃 Exercise</h3>
+                        <p>Spend some time walking, stretching or playing a sport.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">7:00 PM</div>
+                    <div class="activity">
+                        <h3>🎨 Hobby Time</h3>
+                        <p>Relax by doing something creative that you enjoy.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">8:00 PM</div>
+                    <div class="activity">
+                        <h3>📝 Revision</h3>
+                        <p>Quickly revise what you learned during the day.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+                <div class="time-card">
+                    <div class="time">10:00 PM</div>
+                    <div class="activity">
+                        <h3>🌙 Plan Tomorrow & Sleep</h3>
+                        <p>Plan the next day and get enough quality sleep.</p>
+                        <button class="complete-btn">Mark Complete</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Goals -->
+        <section id="goals" class="section goals-section">
+            <p class="section-label">MY GOALS</p>
+            <h2>Small Goals, Big Progress 🎯</h2>
+
+            <div class="goals-card">
+
+                <label>
+                    <input type="checkbox" class="goal-check">
+                    Complete today's study target
+                </label>
+
+                <label>
+                    <input type="checkbox" class="goal-check">
+                    Read for 20 minutes
+                </label>
+
+                <label>
+                    <input type="checkbox" class="goal-check">
+                    Exercise for 30 minutes
+                </label>
+
+                <label>
+                    <input type="checkbox" class="goal-check">
+                    Learn something new
+                </label>
+
+            </div>
+        </section>
+
+
+        <!-- Focus -->
+        <section id="focus" class="section focus-section">
+            <p class="section-label">FOCUS MODE</p>
+            <h2>Pomodoro Study Timer 🍅</h2>
+
+            <div class="timer-card">
+                <div id="timer">25:00</div>
+
+                <button onclick="startTimer()">Start</button>
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        </section>
+
+
+        <!-- Habits -->
+        <section id="habits" class="section">
+            <p class="section-label">DAILY HABITS</p>
+            <h2>Build Better Habits 🌱</h2>
+
+            <div class="habit-grid">
+
+                <button class="habit">💧 Drink Water</button>
+                <button class="habit">📖 Study</button>
+                <button class="habit">🏃 Exercise</button>
+                <button class="habit">😴 Sleep Well</button>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>✨ Designed for a balanced, productive and happy student life.</p>
+        <p>© 2026 The Perfect Student Day</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
